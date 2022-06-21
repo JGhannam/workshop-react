@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './App.css'
 
 export default class App extends Component {
     state = {
@@ -8,7 +9,7 @@ export default class App extends Component {
     render() {
         return (
             <div>      
-            <h1>{this.state.counter}</h1>
+            <h1 className={this.state.counter }>{this.state.counter}</h1>
             <button onClick={() => this.setState({ counter: this.state.counter + 1 })}> 
                 +
             </button> 
