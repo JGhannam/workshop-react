@@ -7,18 +7,14 @@ export default class App extends Component {
     
     render() {
         return (
-            <div>
-                
+            <div>      
             <h1>{this.state.counter}</h1>
-
             <button onClick={() => this.setState({ counter: this.state.counter + 1 })}> 
                 +
             </button> 
-
             <button onClick={() => this.setState({ counter: this.state.counter - 1 })}> 
                 -
             </button>
-
             </div>
         );
     }
