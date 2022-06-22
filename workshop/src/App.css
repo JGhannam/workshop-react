@@ -7,3 +7,23 @@ body {
 .underZero {
     color: red;
 }
+.aboveZero{
+    color: green;
+}
+button {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin: 2%;
+}
+.buttonMinus {
+    background-color: red;
+}
+.buttonAdd {
+    background-color: green;
+}
+.divDamage {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 100000px;
+}

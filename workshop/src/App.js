@@ -3,44 +3,50 @@ import "./App.css";
 
 export default class App extends Component {
   state = {
-    counter: 0,
+    counter: 100,
   };
 
   render() {
     return (
-      <div>
+      <React.Fragment>
 
-        <h1>Life Damage</h1>
+        <h1>Life Damage</h1> 
+          
+          <div>
+            <span>enemy status: </span>
+            <span>{this.isDead() ? 'Killed :) ' : 'LOL you lame'}</span>
+              
+          </div>
+    
+          <h1 className={this.state.counter < 0 ? 'underZero' : 'aboveZero'}>{this.state.counter}</h1>
 
-        <div>
-
-          <h1 className={this.state.counter <= 0 ? 'underZero' : 'aboveZero'}>{this.state.counter}</h1>
-
-          <button
+          {/* <button
             onClick={() => this.setState({ counter: this.state.counter + 1 })}
+            className={"buttonAdd"}
           >
             +
-          </button>
+          </button> */}
 
           <button
             onClick={() => this.setState({ counter: this.state.counter - 1 })}
+            className="buttonMinus"
           >
             -
           </button>
 
-        </div>
-
-        <div>
-          
           <button
-            style={{
-              backgroundColor: this.state.counter <= 0 ? 'red' : 'green',
-            }}
-            onClick={() => this.setState({ counter: this.state.counter - 1 })}
-          ></button>
+            onClick={() => this.setState({ counter: this.state.counter - 10 })}
+            className="buttonMinus"
+          >
+            -10
+          </button>            
 
-        </div>
-      </div>
+          <button className="buttonReset" onClick={() => this.setState({ counter: 100 })}>
+            Reset
+          </button>
+
+        <div className="divDamage" onClick={ () => this.setState({ counter: this.state.counter - 100})}></div>
+      </React.Fragment>
     );
   }
 
@@ -48,11 +54,21 @@ export default class App extends Component {
     this.setState({
       counter: this.state.counter + 1,
     });
+    this.isDead();
   };
 
   subtractFromCounter = () => {
     this.setState({
       counter: this.state.counter - 1,
     });
+    this.isDead();
   };
+
+  isDead = () => {
+    if (this.state.counter < 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }    
 }
