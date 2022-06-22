@@ -8,32 +8,37 @@ export default class App extends Component {
 
   render() {
     return (
-      <div style={{ width: "50%", marginLeft: "35%" }}>
+      <div>
+
         <h1>Life Damage</h1>
-        <div style={{ color: "blue", padding: 20 }}>
-          <h1 className={this.state.counter}>{this.state.counter}</h1>
+
+        <div>
+
+          <h1 className={this.state.counter <= 0 ? 'underZero' : 'aboveZero'}>{this.state.counter}</h1>
+
           <button
             onClick={() => this.setState({ counter: this.state.counter + 1 })}
           >
             +
           </button>
+
           <button
             onClick={() => this.setState({ counter: this.state.counter - 1 })}
           >
             -
           </button>
+
         </div>
+
         <div>
+          
           <button
             style={{
-              backgroundColor: "aqua",
-              color: "blue",
-              width: "0.5%",
-              padding: 50,
-              borderRadius: "50%",
+              backgroundColor: this.state.counter <= 0 ? 'red' : 'green',
             }}
             onClick={() => this.setState({ counter: this.state.counter - 1 })}
           ></button>
+
         </div>
       </div>
     );
