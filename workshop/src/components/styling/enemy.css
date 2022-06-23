@@ -1,0 +1,46 @@
+body {
+    margin: auto;
+    width: 50%;
+    margin-left: 100;  
+    padding: 10px;
+}
+
+.enemyKilled {
+    background-color: red;
+    border-radius: 100px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.enemyNotKilled {
+    background-color: green;
+    border-radius: 100px;
+    padding: 50px;
+    margin-bottom: 50px;
+}
+
+.underZero {
+    color: red;
+    background-color: black;
+}
+.aboveZero{
+    color: green;
+    background-color: black;
+}
+button {
+    padding-right: 5%;
+    padding-left: 5%;
+    margin: 2%;
+}
+.buttonMinus {
+    background-color: red;
+}
+.buttonAdd {
+    background-color: green;
+}
+.divDamage {
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border-radius: 100000px;
+}
