@@ -11,7 +11,7 @@ export default class Enemy extends Component {
       <div>
         
         <div className={this.isDead() ? 'enemyKilled' : 'enemyNotKilled'}>
-        <h1>Life Damage Enemy {this.props.number}</h1> 
+        <h1>Enemy {this.props.number}</h1> 
           
           <div>
             <span>enemy status: </span>
@@ -72,5 +72,5 @@ export default class Enemy extends Component {
     } else {
       return false;
     }
-  }    
+  }
 }

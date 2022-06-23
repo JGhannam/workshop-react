@@ -7,7 +7,7 @@ body {
 
 .enemyKilled {
     background-color: red;
-    border-radius: 100px;
+    border-radius: calc(100% / 3);
     padding: 50px;
     margin: 50px;
 }

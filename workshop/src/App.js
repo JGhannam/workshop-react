@@ -19,8 +19,6 @@ class App extends Component {
       },
     ]
   };
-
-
   render() {
     return (
     this.state.enemycount.map(enemy => (
